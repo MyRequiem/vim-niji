@@ -91,7 +91,7 @@ function! niji#highlight()
 	endfor
 
 	for each in range(1, len(s:current_colour_set))
-		execute printf('highlight default level%s ctermfg=%s guifg=%s',
+		execute printf('highlight default level%s ctermfg=%s ctermbg=0 guifg=%s guibg=#000000',
 		             \ string(each),
 		             \ s:current_colour_set[each - 1][0],
 		             \ s:current_colour_set[each - 1][1])
